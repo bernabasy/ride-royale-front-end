@@ -1,10 +1,8 @@
-import React from 'react'
-import './style.module.css'
+import React from 'react';
+import './style.module.css';
 
-const MakeReservation = () => {
-  return (
-    <div>MakeReservation</div>
-  )
-}
+const MakeReservation = () => (
+  <div>MakeReservation</div>
+);
 
-export default MakeReservation
+export default MakeReservation;
