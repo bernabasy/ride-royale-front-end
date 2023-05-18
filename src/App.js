@@ -1,10 +1,11 @@
 import './App.css';
+import MakeReservation from './pages/MakeReservation/MakeReservation';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Ride Royal</h1>
-    </div>
+    <main className="container-fluid">
+      <MakeReservation />
+    </main>
   );
 }
 
