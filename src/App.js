@@ -3,7 +3,7 @@ import MakeReservation from './pages/MakeReservation/MakeReservation';
 
 function App() {
   return (
-    <main className="container-fluid">
+    <main>
       <MakeReservation />
     </main>
   );
