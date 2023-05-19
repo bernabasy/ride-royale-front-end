@@ -1,10 +1,30 @@
+.status-bar {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
-  .aside-wrapper {
+  .status-bar {
+    display: block;
+  }
+
+  .aside-hidden {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
-    transform: translateX(-100vw)
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .aside-visible {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 1;
+    transform: translateX(-20%);
+    transition: transform 0.3s ease-in-out 0s;
+    padding-left: 20%;
   }
 
   .status-bar {
