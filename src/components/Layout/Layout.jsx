@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { FaBars, FaRegClosedCaptioning } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
+import { MdOutlineClose } from 'react-icons/md';
 
 import style from './style.module.css';
+import SideNav from '../SideNav';
 
 const Layout = ({ children }) => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -27,17 +29,15 @@ const Layout = ({ children }) => {
         </div>
       </nav>
       <aside className={`col-md-2 bg-light container-fluid vh-100 ${sidebarVisible ? style['aside-visible'] : style['aside-hidden']}`}>
-        <div className="row d-flex align-items-center justify-content-start">
-          <div className="col">
-            <button
-              type="button"
-              className="btn"
-              onClick={handleMenuClick}
-            >
-              <FaRegClosedCaptioning style={{ fontSize: '1.5rem' }} />
-            </button>
-          </div>
-        </div>
+        <button
+          type="button"
+          className={`btn float-end ${style['aside-close']}`}
+          onClick={handleMenuClick}
+        >
+          <MdOutlineClose style={{ fontSize: '1.5rem' }} />
+        </button>
+        <h4 className="fw-bold text-center my-4">Ride Royal</h4>
+        <SideNav />
       </aside>
       <div className="col-md-10">
         {children}

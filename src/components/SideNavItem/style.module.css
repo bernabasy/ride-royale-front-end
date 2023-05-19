@@ -1,0 +1,11 @@
+.side-nav-item {
+  margin: 1.2em 0;
+  font-weight: 500;
+}
+
+.side-nav-item:hover {
+  background-color: #96bf01;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 0.25rem;
+}

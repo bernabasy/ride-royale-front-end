@@ -2,8 +2,16 @@
   display: none;
 }
 
+.aside-close {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
   .status-bar {
+    display: block;
+  }
+
+  .aside-close {
     display: block;
   }
 
