@@ -10,3 +10,33 @@
   height: 100vh;
   background-color: rgba(150, 191, 1, 0.75);
 }
+
+.divider {
+  display: block;
+  content: '';
+  height: 0.15rem;
+  background-color: #fff;
+  opacity: 0.2;
+}
+
+.input-field {
+  background-color: #96bf01;
+  color: #fff;
+}
+
+.label,
+.btn-submit {
+  width: 100%;
+  color: #fff;
+}
+
+.btn-submit {
+  background-color: #fff;
+  color: #96bf01;
+}
+
+.btn-submit:hover {
+  background-color: #fff;
+  color: #96bf01;
+  opacity: 0.9;
+}
