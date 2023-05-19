@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Layout = ({ children }) => (
-  <section className="row">
+  <section className="row gx-0">
     <aside className="col-md-2 bg-primary vh-100">
       Side Navigation
     </aside>
