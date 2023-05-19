@@ -1,6 +1,8 @@
 .side-nav-item {
   margin: 1.2em 0;
   font-weight: 500;
+  display: flex;
+  align-items: center;
 }
 
 .side-nav-item:hover {
@@ -8,4 +10,8 @@
   cursor: pointer;
   color: #fff;
   border-radius: 0.25rem;
+}
+
+.side-nav-span {
+  margin-left: 0.8em;
 }
