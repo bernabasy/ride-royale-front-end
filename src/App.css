@@ -1,3 +1,8 @@
-.App {
-  text-align: center;
+.form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(150, 191, 1, 0.25);
+}
+
+.icon {
+  font-size: 1.5rem;
 }

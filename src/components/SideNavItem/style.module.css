@@ -1,0 +1,18 @@
+.side-nav-link {
+  padding: 0.3em 0.1em;
+  display: flex;
+  align-items: center;
+  color: #1d1c1c;
+  width: 90%;
+}
+
+.side-nav-link:hover {
+  background-color: #96bf01;
+  cursor: pointer;
+  color: #fff !important;
+  border-radius: 0.25rem;
+}
+
+.side-nav-span {
+  margin-left: 0.4em;
+}
