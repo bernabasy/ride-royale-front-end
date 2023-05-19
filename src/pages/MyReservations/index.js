@@ -3,7 +3,7 @@ import Layout from '../../components/Layout/Layout';
 
 const MyReservations = () => (
   <Layout>
-    <main>MyReservations</main>
+    <div>MyReservations</div>
   </Layout>
 );
 

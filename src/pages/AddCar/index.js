@@ -3,7 +3,7 @@ import Layout from '../../components/Layout/Layout';
 
 const AddCar = () => (
   <Layout>
-    <main>AddCar</main>
+    <div>AddCar</div>
   </Layout>
 );
 

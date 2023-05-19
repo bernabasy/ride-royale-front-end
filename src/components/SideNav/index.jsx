@@ -8,24 +8,50 @@ import {
 } from 'react-icons/md';
 import SideNavItem from '../SideNavItem';
 
-const SideNav = () => (
-  <ul className="list-group bg-white mt-4">
-    <SideNavItem title="Home">
-      <MdHome className="icon" />
-    </SideNavItem>
-    <SideNavItem title="New Reservation">
-      <MdDirectionsCar className="icon" />
-    </SideNavItem>
-    <SideNavItem title="My Reservations">
-      <MdOutlineEventNote className="icon" />
-    </SideNavItem>
-    <SideNavItem title="Add Car">
-      <MdOutlineAdd className="icon" />
-    </SideNavItem>
-    <SideNavItem title="Delete Car">
-      <MdOutlineDelete className="icon" />
-    </SideNavItem>
-  </ul>
-);
+const SideNav = () => {
+  const sideMenuItems = [
+    {
+      title: 'Home',
+      path: '/cars',
+      icon: <MdHome className="icon" />,
+    },
+    {
+      title: 'New Reservation',
+      path: '/new-reservation',
+      icon: <MdDirectionsCar className="icon" />,
+    },
+    {
+      title: 'My Reservation',
+      path: '/reservations',
+      icon: <MdOutlineEventNote className="icon" />,
+    },
+    {
+      title: 'Add Car',
+      path: '/add-car',
+      icon: <MdOutlineAdd className="icon" />,
+    },
+    {
+      title: 'Delete Car',
+      path: '/delete-car',
+      icon: <MdOutlineDelete className="icon" />,
+    },
+  ];
+
+  return (
+    <ul className="list-group bg-white mt-4">
+      {
+        sideMenuItems.map((item) => (
+          <SideNavItem
+            key={item.title}
+            title={item.title}
+            path={item.path}
+          >
+            {item.icon}
+          </SideNavItem>
+        ))
+      }
+    </ul>
+  );
+};
 
 export default SideNav;
