@@ -9,7 +9,7 @@ import {
 import SideNavItem from '../SideNavItem';
 
 const SideNav = () => (
-  <ul className="list mt-4">
+  <ul className="list-group bg-white mt-4">
     <SideNavItem title="Home">
       <MdHome className="icon" />
     </SideNavItem>

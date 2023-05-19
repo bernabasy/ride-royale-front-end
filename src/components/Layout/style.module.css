@@ -6,7 +6,7 @@
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 920px) {
   .status-bar {
     display: block;
   }
