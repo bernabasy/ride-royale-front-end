@@ -1,0 +1,13 @@
+@media screen and (max-width: 767px) {
+  .aside-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: translateX(-100vw)
+  }
+
+  .status-bar {
+    position: fixed;
+  }
+}
