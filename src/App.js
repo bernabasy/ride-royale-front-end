@@ -1,23 +1,13 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import MakeReservation from './pages/MakeReservation/MakeReservation';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home';
-import MyReservations from './pages/MyReservations';
-import AddCar from './pages/AddCar';
-import Deletecar from './pages/DeleteCar';
+import SIDE_NAV_ROUTES from './utils/sideNavRoutes';
 
 function App() {
+  const sideNavRoutes = createBrowserRouter(SIDE_NAV_ROUTES);
+
   return (
     <main>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/cars" element={<Home />} />
-          <Route path="/new-reservation" element={<MakeReservation />} />
-          <Route path="/reservations" element={<MyReservations />} />
-          <Route path="/add-car" element={<AddCar />} />
-          <Route path="/delete-car" element={<Deletecar />} />
-        </Routes>
-      </BrowserRouter>
+      <RouterProvider router={sideNavRoutes} />
     </main>
   );
 }
