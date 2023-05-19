@@ -9,6 +9,7 @@
 @media screen and (max-width: 920px) {
   .status-bar {
     display: block;
+    position: fixed;
   }
 
   .aside-close {
@@ -33,9 +34,5 @@
     transform: translateX(-20%);
     transition: transform 0.3s ease-in-out 0s;
     padding-left: 20%;
-  }
-
-  .status-bar {
-    position: fixed;
   }
 }
