@@ -7,13 +7,13 @@ const CarCard = ({
 }) => (
   <NavLink key={id} to={`/car/${id}`}>
     <div>
-      <div>
-        <img src={picture} alt={picture} />
+      <div className="picContainer">
+        <img className="carPicture" src={picture} alt={picture} />
       </div>
-      <div className="model-detail d-flex flex-column justify-content-center align-items-center">
-        <h3 className="h4 mt-3">{model}</h3>
-        <h3 className="h4 mt-3">{make}</h3>
-        <h5>
+      <div className="d-flex flex-column justify-content-center align-items-center">
+        <p className="">{model}</p>
+        <p className="">{make}</p>
+        <h5 className="price">
           $
           {' '}
           {price}
