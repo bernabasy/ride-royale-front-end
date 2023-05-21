@@ -6,3 +6,13 @@
 .icon {
   font-size: 1.5rem;
 }
+
+.page-wrapper {
+  transform: scale(0.95);
+}
+
+@media screen and (max-width: 920px) {
+  .page-wrapper {
+    transform: scale(1);
+  }
+}

@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </nav>
-      <aside className={`col-md-2 bg-danger vh-100 ${sidebarVisible ? style['aside-visible'] : style['aside-hidden']} ${style.sidebar}`}>
+      <aside className={`col-md-2 border-end bg-white vh-100 ${sidebarVisible ? style['aside-visible'] : style['aside-hidden']} ${style.sidebar}`}>
         <button
           type="button"
           className={`btn float-end ${style['aside-close']}`}

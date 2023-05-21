@@ -4,7 +4,7 @@ import Layout from '../../components/Layout/Layout';
 
 const MakeReservation = () => (
   <Layout>
-    <div className={`bg-image vh-100 ${style['bg-wrapper']}`}>
+    <div className={`bg-image min-vh-100 ${style['bg-wrapper']}`}>
       <div className={`d-flex flex-column justify-content-center align-items-center ${style['image-overlay']}`}>
         <div className="w-75">
           <div className="text-center">
