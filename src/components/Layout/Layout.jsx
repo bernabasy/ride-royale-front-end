@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </nav>
-      <aside className={`col-md-2 bg-white vh-100 ${sidebarVisible ? style['aside-visible'] : style['aside-hidden']}`}>
+      <aside className={`col-md-2 bg-danger vh-100 ${sidebarVisible ? style['aside-visible'] : style['aside-hidden']} ${style.sidebar}`}>
         <button
           type="button"
           className={`btn float-end ${style['aside-close']}`}
@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
         <h4 className="fw-bold text-center my-4">Ride Royal</h4>
         <SideNav />
       </aside>
-      <div className="col-md-10">
+      <div className={`col-md-10 ${style['main-wrapper']}`}>
         {children}
       </div>
     </section>
