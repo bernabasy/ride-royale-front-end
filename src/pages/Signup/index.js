@@ -3,7 +3,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import style from './style.module.css';
 
-const LoginPage = () => (
+const SignupPage = () => (
   <div className="d-flex justify-content-center align-items-center min-vh-100 container">
     <form className={`${style['form-wrapper']}`}>
       <h1 className="h3 mb-3 fw-normal">Create an Account</h1>
@@ -35,4 +35,4 @@ const LoginPage = () => (
     </form>
   </div>
 );
-export default LoginPage;
+export default SignupPage;

@@ -4,7 +4,7 @@ import MakeReservation from '../pages/MakeReservation/MakeReservation';
 import MyReservations from '../pages/MyReservations';
 import AddCar from '../pages/AddCar';
 import Deletecar from '../pages/DeleteCar';
-import SignupPage from '../pages/SignUp';
+import SignupPage from '../pages/Signup';
 import LoginPage from '../pages/Login';
 
 const APP_ROUTES = [
