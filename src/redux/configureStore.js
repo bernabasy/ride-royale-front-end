@@ -1,1 +1,9 @@
-// Redux store configurations go here
+import { configureStore } from '@reduxjs/toolkit';
+
+const store = configureStore({
+  reducer: {
+
+  },
+});
+
+export default store;

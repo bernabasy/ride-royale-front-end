@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import APP_ROUTES from './utils/sideNavRoutes';
+import APP_ROUTES from './utils/appRoutes';
 import './App.css';
 
 function App() {
