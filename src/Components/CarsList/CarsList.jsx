@@ -5,7 +5,7 @@ import axios from 'axios';
 import CarCard from './CarCard';
 import './carList.css';
 
-const CarList = () => {
+const CarsList = () => {
   const [cars, setCars] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -73,4 +73,4 @@ const CarList = () => {
   );
 };
 
-export default CarList;
+export default CarsList;

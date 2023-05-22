@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from '../../components/Layout/Layout';
-import CarList from '../../components/CarsList/CarsList';
+import CarsList from '../../components/CarsList/CarsList';
 
 const Home = () => (
   <Layout>
-    <CarList />
+    <CarsList />
   </Layout>
 );
 
