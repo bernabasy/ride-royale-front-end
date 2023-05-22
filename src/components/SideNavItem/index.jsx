@@ -9,7 +9,7 @@ const SideNavItem = ({
   path,
   children,
 }) => (
-  <li className={`mx-2 list-group-item border-0 ${style['side-nav-item']}`}>
+  <li className={`mx-2 list-group-item m-0 p-0 border-0 my-2 ${style['side-nav-item']}`}>
     <NavLink to={path} className={`${({ isActive }) => (isActive ? style['active-link'] : style['not-active-link'])} text-decoration-none ${style['side-nav-link']}`}>
       {children}
       <span className={`${style['side-nav-span']}`}>{title}</span>

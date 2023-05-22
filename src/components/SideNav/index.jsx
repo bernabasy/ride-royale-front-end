@@ -38,7 +38,7 @@ const SideNav = () => {
   ];
 
   return (
-    <ul className="list-group bg-white mt-4">
+    <ul className="list-group rounded-0 mt-4">
       {
         sideMenuItems.map((item) => (
           <SideNavItem

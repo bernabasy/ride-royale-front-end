@@ -7,6 +7,16 @@
   font-size: 1.5rem;
 }
 
+.page-wrapper {
+  transform: scale(0.95);
+}
+
+@media screen and (max-width: 920px) {
+  .page-wrapper {
+    transform: scale(1);
+  }
+}
+
 .carousel .react-multiple-carousel__arrow--left::before {
   color: rgb(187, 30, 30);
 }
