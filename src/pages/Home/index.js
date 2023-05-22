@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout/Layout';
-import CarList from '../../components/CarsList/CarsList';
+import CarList from '../../components/CarList/CarList';
 
 const Home = () => (
   <Layout>
