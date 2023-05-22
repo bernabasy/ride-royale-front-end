@@ -3,6 +3,7 @@ import Carousel from 'react-multi-carousel';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import CarCard from './CarCard';
+import './carList.css';
 
 const CarList = () => {
   const [cars, setCars] = useState([]);

@@ -17,35 +17,6 @@
   }
 }
 
-.carousel .react-multiple-carousel__arrow--left::before {
-  color: rgb(187, 30, 30);
-}
-
-.picContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.carPicture {
-  min-height: 350px;
-  max-height: 351px;
-  object-fit: cover;
-  min-width: 250px;
-  max-width: 250px;
-  border-radius: 20px;
-}
-
-.price {
-  background-color: rgb(24, 216, 91);
-  border-radius: 20px;
-  padding: 0.4rem 0.75rem;
-  margin-top: 1rem;
-  color: rgb(249, 249, 249);
-  font-weight: 500;
-}
-
 .custom-button {
   background-color: blue;
   color: white;
