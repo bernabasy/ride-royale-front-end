@@ -1,13 +1,13 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import SIDE_NAV_ROUTES from './utils/sideNavRoutes';
+import APP_ROUTES from './utils/sideNavRoutes';
 import './App.css';
 
 function App() {
-  const sideNavRoutes = createBrowserRouter(SIDE_NAV_ROUTES);
+  const appRoutes = createBrowserRouter(APP_ROUTES);
 
   return (
     <main>
-      <RouterProvider router={sideNavRoutes} />
+      <RouterProvider router={appRoutes} />
     </main>
   );
 }
