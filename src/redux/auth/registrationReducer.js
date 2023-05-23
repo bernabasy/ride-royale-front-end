@@ -3,7 +3,6 @@ import registrationService from '../../services/registrationService';
 
 // Actions
 const REGISTER_REQUEST = 'rideroyale/users/REGISTER';
-// const REGISTER_SUCCESS = 'rideroyale/users/REGISTER_SUCCESS';
 const REGISTER_FAILURE = 'rideroyale/users/REGISTER_FAILURE';
 
 const initialState = {

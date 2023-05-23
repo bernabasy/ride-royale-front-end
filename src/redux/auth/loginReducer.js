@@ -49,8 +49,6 @@ const loginReducer = (state = initialState, action) => {
 
 export const loginUserAsync = createAsyncThunk(LOGIN_SUCCESS, async (payload, thunkAPI) => {
   let data;
-  // console.log('Payload: ', payload);
-
   try {
     let bearerToken = localStorage.getItem('bearerToken');
 
