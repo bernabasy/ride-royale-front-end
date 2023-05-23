@@ -15,6 +15,10 @@ const SIDE_NAV_ROUTES = [
     element: <CarDetails />,
   },
   {
+    path: '/delete-cars',
+    element: <Deletecar />,
+  },
+  {
     path: '/new-reservation',
     element: <MakeReservation />,
   },
