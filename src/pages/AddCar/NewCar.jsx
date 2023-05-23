@@ -70,7 +70,87 @@ const NewCar = () => {
 
   return (
     <Container className="bg-wrapper_newCar container-fluid">
-      
+      <div className="d-flex flex-column justify-content-center align-items-center image-overlay">
+        <Row className="w-100">
+          <Col md={12}>
+            <h2 className="text-center text-back text-uppercase h2">Add Car</h2>
+            <hr className="border-2 w-full mb-3" />
+            <Form onSubmit={handleSubmit} className="w-50 mx-auto">
+              <div className="mb-3">
+                <label htmlFor="model">
+                  Model:
+                  <input
+                    type="text"
+                    value={model}
+                    onChange={(e) => setModel(e.target.value)}
+                    className="form-control text-black width"
+                  />
+                </label>
+              </div>
+              <div className="mb-3">
+                <label htmlFor="make">
+                  Make:
+                  <input
+                    type="text"
+                    value={make}
+                    onChange={(e) => setMake(e.target.value)}
+                    className="form-control text-black width"
+                  />
+                </label>
+              </div>
+              <div className="mb-3">
+                <label htmlFor="Picture">
+                  Picture:
+                  <input
+                    type="text"
+                    value={picture}
+                    onChange={(e) => setPicture(e.target.value)}
+                    className="form-control text-black width"
+                  />
+                </label>
+              </div>
+              <div className="mb-3">
+                <label htmlFor="Price">
+                  Price:
+                  <input
+                    type="text"
+                    value={price}
+                    onChange={(e) => setPrice(e.target.value)}
+                    className="form-control text-black width"
+                  />
+                </label>
+              </div>
+              <div className="mb-3 w-100">
+                <label htmlFor="user_id w-100">
+                  user_id:
+                  <input
+                    type="text"
+                    /* eslint-disable-next-line camelcase */
+                    value={user_id}
+                    /* eslint-disable-next-line camelcase */
+                    onChange={(e) => setUser_id(e.target.value)}
+                    className="form-control text-black width"
+                  />
+                </label>
+              </div>
+
+              {loading ? (
+                <Button
+                  type="button"
+                  className="btn btn-primary btn-block disabled"
+                >
+                  <i className="fa-solid fa-spinner fa-spin" />
+                </Button>
+              ) : (
+                <Button type="submit" className="btn btn-primary btn-block">
+                  Add
+                </Button>
+              )}
+            </Form>
+            <p className="fs-5 fw-semibold">{responseMsg}</p>
+          </Col>
+        </Row>
+      </div>
     </Container>
   );
 };
