@@ -56,6 +56,12 @@
 
 .reservebtn {
   justify-items: end;
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: green;
+  color: white;
 }
 
 .detail {

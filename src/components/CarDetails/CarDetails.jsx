@@ -33,8 +33,8 @@ const CarDetails = () => {
               {car.price}
             </p>
           </div>
-          <button type="button" className={styles.reservebtn}>
-              <i class="fa-solid fa-car-side"></i>
+          <button type="button" className={styles.reservebtn} >
+              
                 Reserve
             </button>
         </div>
