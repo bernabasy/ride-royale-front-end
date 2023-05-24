@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import axios from 'axios';
 import {
   Container, Row, Col, Form, Button,
@@ -7,30 +8,26 @@ import './newCar.css';
 
 const NewCar = () => {
   const [model, setModel] = useState('');
-  /* eslint-disable-next-line camelcase */
-  const [user_id, setUser_id] = useState('');
   const [make, setMake] = useState('');
   const [picture, setPicture] = useState('');
   const [price, setPrice] = useState('');
   const [loading, setLoading] = useState(false);
   const [responseMsg, setResponseMsg] = useState('');
-
+  const user = useSelector((state) => state.user);
+  console.log(user.id);
   const handleSubmit = (event) => {
     event.preventDefault();
     setLoading(true);
     const data = {
-      /* eslint-disable-next-line camelcase */
-      model, make, picture, price, user_id,
+      user_id: user.user.id, model, make, picture, price,
     };
-    axios.post('http://127.0.0.1:3000/cars', data)
+    axios.post('http://127.0.0.1:3000/api/v1/cars', data)
       .then((response) => {
         setLoading(false);
         setModel('');
         setMake('');
         setPicture('');
         setPrice('');
-        /* eslint-disable-next-line camelcase */
-        setUser_id('');
         setResponseMsg(response.data.success);
         if (responseMsg) {
           setTimeout(() => {
@@ -44,8 +41,6 @@ const NewCar = () => {
         setMake('');
         setPicture('');
         setPrice('');
-        /* eslint-disable-next-line camelcase */
-        setUser_id('');
         setResponseMsg(error.response.data.error);
         if (responseMsg) {
           setTimeout(() => {
@@ -120,20 +115,6 @@ const NewCar = () => {
                   />
                 </label>
               </div>
-              <div className="mb-3 w-100">
-                <label htmlFor="user_id w-100">
-                  user_id:
-                  <input
-                    type="text"
-                    /* eslint-disable-next-line camelcase */
-                    value={user_id}
-                    /* eslint-disable-next-line camelcase */
-                    onChange={(e) => setUser_id(e.target.value)}
-                    className="form-control text-black width"
-                  />
-                </label>
-              </div>
-
               {loading ? (
                 <Button
                   type="button"
