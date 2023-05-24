@@ -9,7 +9,7 @@ const DeleteCar = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://127.0.0.1:3000/api/v1/cars`)
+      .get('http://127.0.0.1:3000/api/v1/cars')
       .then((response) => {
         setCars(response.data.cars);
         setLoading(false);
