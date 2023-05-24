@@ -9,7 +9,6 @@ const SplashScreen = () => (
         <h4 className="fw-bold fs-1 mb-4 text-white">Ride Royale</h4>
       </div>
       <div>
-        <NavLink to="/signin" className="btn btn-primary text-white mx-4">Login</NavLink>
         <NavLink to="/signup" className="btn btn-secondary text-white mx-4">Sign Up</NavLink>
       </div>
     </div>

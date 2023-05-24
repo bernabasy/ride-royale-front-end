@@ -17,10 +17,10 @@ function App() {
 
   return (
     <RouterProvider router={router}>
-    <App>
-      {user.logged_in && <MyReservations />}
-    </App>
-  </RouterProvider>
+      <App>
+        {user.logged_in && <MyReservations />}
+      </App>
+    </RouterProvider>
   );
 }
 

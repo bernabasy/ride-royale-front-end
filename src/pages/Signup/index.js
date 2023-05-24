@@ -37,7 +37,7 @@ const SignupPage = () => {
   } = formData;
 
   if (user.logged_in) {
-    return <Navigate replace to='/cars' />;
+    return <Navigate replace to="/cars" />;
   }
 
   return (

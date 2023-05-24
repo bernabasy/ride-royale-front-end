@@ -25,13 +25,10 @@ const LoginPage = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     dispatch(login({ ...formData, setLoading }));
-    
   };
 
   const { username } = formData;
 
-  if (user.logged_in) {
-  }
   return (
     <div className="d-flex justify-content-center align-items-center min-vh-100 container">
       <form className={`${style['form-wrapper']}`}>
