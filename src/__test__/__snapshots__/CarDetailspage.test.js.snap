@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check the component 1`] = `
+Array [
+  <h2
+    className="title"
+  >
+    CAR DETAILS
+  </h2>,
+  <div
+    className="detailContainer"
+  >
+    <div
+      className="car"
+    >
+      <img />
+    </div>
+    <div
+      className="detail"
+    >
+      <h2 />
+      <div
+        className="company"
+      >
+        <p>
+          Company Name:
+        </p>
+        <p />
+      </div>
+      <div
+        className="price"
+      >
+        <p>
+          Price Per Day: 
+        </p>
+        <p
+          className="priceColor"
+        >
+          $
+        </p>
+      </div>
+      <button
+        className="reservebtn"
+        type="button"
+      >
+        Reserve
+      </button>
+    </div>
+  </div>,
+]
+`;
