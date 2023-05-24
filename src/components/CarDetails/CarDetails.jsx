@@ -34,7 +34,7 @@ const CarDetails = () => {
             </p>
           </div>
           <button type="button" className={styles.reservebtn}>
-              <i className="fa-solid fa-car-side"></i>
+              <i className="fa-solid fa-car-side"/>
                 Reserve
             </button>
         </div>
