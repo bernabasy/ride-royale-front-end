@@ -16,3 +16,14 @@
     transform: scale(1);
   }
 }
+
+.custom-button {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
