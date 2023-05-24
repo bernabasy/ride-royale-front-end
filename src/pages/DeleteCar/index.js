@@ -1,10 +1,11 @@
 import React from 'react';
 import Layout from '../../components/Layout/Layout';
+import DeleteCar from '../../components/DeleteCar/DeleteCar';
 
-const DeletecarItem = () => (
+const DeleteCarItems = () => (
   <Layout>
-    <div>DeleteCar</div>
+    <DeleteCar />
   </Layout>
 );
 
-export default DeletecarItem;
+export default DeleteCarItems;
