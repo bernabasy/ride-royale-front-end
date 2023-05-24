@@ -34,7 +34,7 @@ const CarDetails = () => {
             </p>
           </div>
           <button type="button" className={styles.reservebtn}>
-                Reserve
+            Reserve
           </button>
         </div>
       </div>
