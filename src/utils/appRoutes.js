@@ -11,42 +11,34 @@ const APP_ROUTES = [
   {
     path: '/',
     element: <SplashScreen />,
-    protected: false,
   },
   {
     path: '/signup',
     element: <SignupPage />,
-    protected: false,
   },
   {
     path: '/signin',
     element: <LoginPage />,
-    protected: false,
   },
   {
     path: '/cars',
     element: <Home />,
-    protected: true,
   },
   {
     path: '/new-reservation',
     element: <MakeReservation />,
-    protected: true,
   },
   {
     path: '/reservations',
     element: <MyReservations />,
-    protected: true,
   },
   {
     path: '/add-car',
     element: <AddCar />,
-    protected: true,
   },
   {
     path: '/delete-car',
     element: <Deletecar />,
-    protected: true,
   },
 ];
 

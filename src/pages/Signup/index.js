@@ -1,32 +1,18 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useEffect, useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink, Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import style from './style.module.css';
-import { createUserAsync } from '../../redux/auth/registrationReducer';
+import { register } from '../../redux/auth/authSlice';
 
 const SignupPage = () => {
-  const registrationData = useSelector((state) => state.register);
-
   const [formData, setFormData] = useState({
     username: '',
     email: '',
-    password: '',
-    passwordConfirm: '',
   });
-
-  const [registrationInfo, setRegistrationInfo] = useState('');
-
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (registrationData.success === true) {
-      navigate('/signin');
-    } else {
-      setRegistrationInfo('Email has already been taken please.');
-    }
-  }, [registrationData, navigate]);
+  const user = useSelector((state) => state.user);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -38,34 +24,28 @@ const SignupPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { passwordConfirm, ...userData } = formData;
-    dispatch(createUserAsync(userData));
-    // setFormData({
-    //   username: '',
-    //   email: '',
-    //   password: '',
-    //   passwordConfirm: '',
-    // });
-    // navigate('/signin');
+    dispatch(register({ ...formData, setLoading }));
+    setFormData({
+      username: '',
+      email: '',
+    });
   };
 
   const {
     username,
     email,
-    password,
-    passwordConfirm,
   } = formData;
+
+  if (user.logged_in) {
+    return <Navigate replace to="/home" />;
+  }
 
   return (
     <div className="d-flex justify-content-center align-items-center min-vh-100 container">
       <form className={`${style['form-wrapper']}`}>
-        {
-        registrationData.status === 'failed' && (
-        <div className="alert alert-danger" role="alert">
-          {registrationInfo}
+        <div className={`${user.error && 'alert alert-danger'}`} role="alert">
+          {user.error}
         </div>
-        )
-      }
         <h1 className="h3 mb-3 fw-normal">Create an Account</h1>
         <div className="form-floating mb-2">
           <input
@@ -92,39 +72,19 @@ const SignupPage = () => {
           />
           <label htmlFor="email">Email</label>
         </div>
-
-        <div className="form-floating mb-4">
-          <input
-            type="password"
-            name="password"
-            className="form-control"
-            id="password"
-            placeholder="Password"
-            value={password}
-            onChange={handleChange}
-          />
-          <label htmlFor="password">Password</label>
-        </div>
-
-        <div className="form-floating mb-4">
-          <input
-            type="password"
-            className="form-control"
-            id="passwordConfirm"
-            name="passwordConfirm"
-            placeholder="Password"
-            value={passwordConfirm}
-            onChange={handleChange}
-          />
-          <label htmlFor="password">Confirm Password </label>
-        </div>
-        <button
-          className="w-100 btn btn-lg btn-primary"
-          type="submit"
-          onClick={handleSubmit}
-        >
-          Create account
-        </button>
+        {loading ? (
+          <button type="button" className="btn btn-primary disabled mb-3">
+            <i className="fa-solid fa-spinner fa-spin" />
+          </button>
+        ) : (
+          <button
+            className="w-100 btn btn-lg btn-primary"
+            type="submit"
+            onClick={handleSubmit}
+          >
+            Create account
+          </button>
+        )}
         <p className="mt-5 mb-3 text-body-secondary">
           Already have an account?
           <NavLink to="/signin" className="ms-2">signin</NavLink>
