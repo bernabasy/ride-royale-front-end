@@ -3,11 +3,20 @@ import MakeReservation from '../pages/MakeReservation/MakeReservation';
 import MyReservations from '../pages/MyReservations';
 import AddCar from '../pages/AddCar';
 import Deletecar from '../pages/DeleteCar';
+import CarDetails from '../components/CarDetails/CarDetails';
 
 const SIDE_NAV_ROUTES = [
   {
     path: '/cars',
     element: <Home />,
+  },
+  {
+    path: '/car-details/:id',
+    element: <CarDetails />,
+  },
+  {
+    path: '/delete-cars',
+    element: <Deletecar />,
   },
   {
     path: '/new-reservation',
@@ -21,6 +30,7 @@ const SIDE_NAV_ROUTES = [
     path: '/add-car',
     element: <AddCar />,
   },
+
   {
     path: '/delete-car',
     element: <Deletecar />,
