@@ -18,13 +18,20 @@ const LoginPage = () => {
   const [loginInfo, setloginInfo] = useState('');
 
   useEffect(() => {
-    if (loginData.data.error) {
+    if (localStorage.getItem('bearerToken')) {
+      navigate('/cars');
+    }
+  }, [navigate]);
+
+  useEffect(() => {
+    if (loginData.status === 'succeeded') {
+      navigate('/cars');
+    } else if (loginData.status === 'failed') {
       setloginInfo('Invalid username or password');
     } else {
-      console.log(loginData);
       setloginInfo('An error occurred while logging in');
     }
-  }, [loginData]);
+  }, [loginData.status, navigate]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
