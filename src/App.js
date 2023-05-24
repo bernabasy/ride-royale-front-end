@@ -13,7 +13,7 @@ function App() {
   const user = useSelector((state) => state.user);
   useEffect(() => {
     dispatch(authenticateUser());
-  }, []);
+  }, [dispatch]);
 
   return (
     <RouterProvider router={router}>
