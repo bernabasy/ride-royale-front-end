@@ -1,70 +1,136 @@
-# Getting Started with Create React App
+# Ride Royale
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This project is designed for the reservation of fancy cars. If you are preparing for a special day or event and you want a cool car for it, this website is the best place for you. If you have a luxurious car and want to make some extra money from it, you can add it to our website and others will be able to reserve it!
 
-In the project directory, you can run:
+Here are some of the benefits of using our website:
 
-### `npm start`
+- Wide selection of cars to choose from
+- Competitive prices
+- Easy and convenient booking process
+- 24/7 customer support 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Main features of this website are:
+ - Users can see details of all the cars.
+ - Users can reserve a car for a special day (a car that hasn't been reserved yet).
+ - Users can add their own cars and remove them if they want to.
+ 
+ 
+ ![Animation]()
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Project Documentation 📄
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Live demo [link]()👈
+- API deployment [link]()👈
+- API GitHub repository [link](https://github.com/bernabasy/ride-royale-front-end)👈
 
-### `npm run build`
+## Kanban Board:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Kanban Board [link](https://github.com/users/bernabasy/projects/8/views/1)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Initial state of the Kanban Board:
+![image](https://github.com/bernabasy/Ride-Royale-front-end/assets/104406349/10e892d5-d1f4-4e45-837a-b3c0d622d9c2)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Team members: 3 (Bernabas yosef, Michael Amponsah, Saeqa Sultani)
+ 
+## Built With 🛠️
 
-### `npm run eject`
+ - Programming Languages: HTML, CSS, JavaScript.
+ - Frameworks: React, Redux and Bootstrap.
+ - Code Editor: VS Code.
+ 
+## Getting Started
+ 
+To get a local copy up and running follow these simple steps.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- A web browser like Google Chrome.
+- A code editor like Visual Studio Code with Git and nodejs.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+> You can check if Git is installed by running the following command in the terminal.
+```
+$ git --version
+```
+> Likewise for Node installation.
+```
+$ node --version
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Setup
 
-## Learn More
+Clone the repository using the GitHub link provided below.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+In the terminal, go to your file directory and run this command.
+```
+$ git clone https://github.com/bernabasy/ride-royale-front-end.git
+```
+### Usage
 
-### Code Splitting
+### Run locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Make your way to the correct directory by running this command:
 
-### Analyzing the Bundle Size
+```
+$ cd ride-royale-front-end
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Install the required dependencies to run the project with this command:
+```
+$ npm install
+```
 
-### Making a Progressive Web App
+Then run it in your browser with this command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+$ npm start
+```
 
-### Advanced Configuration
+Kindly modify the files as needed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Run tests
 
-### Deployment
+To run tests, please run this command
+```
+$ npm run test
+```
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+👤 **Bernabas**
 
-### `npm run build` fails to minify
+- GitHub: [@githubhandle](https://github.com/bernabasy)
+- Twitter: [@twitterhandle](https://twitter.com/@bernabasjosef)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/bernabas-yosef)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+👤 **Michael Amponsah**
+
+- GitHub: [@michaelamponsah](https://github.com/michaelamponsah)
+- Twitter: [@_mikeamponsah](https://twitter.com/_mikeamponsah)
+- LinkedIn: [michaelamponsah](https://linkedin.com/in/mikeamponsah)
+
+👤 **Saeqa**
+
+- GitHub: [SaeqaSultani](https://github.com/SaeqaSultani)
+- Twitter: [SaeqaSultani](https://twitter.com/SaeqaSultani)
+- LinkedIn: [SaeqaSultani](https://www.linkedin.com/in/saeqa-sultani)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+- [Microverse](https://www.microverse.org/)
+- Original design idea by [Murat Korkmaz on Behance](https://www.behance.net/muratk).
+- [FontAwesome](https://fontawesome.com/) and [Flaticon](https://www.flaticon.com/) for icons.
+
+## 📝 License
+This project is [MIT](./LICENSE) licensed.
