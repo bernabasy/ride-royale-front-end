@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import axios from 'axios';
 import styles from './CarDetails.module.css';
 
@@ -13,6 +13,10 @@ const CarDetails = () => {
       .get(`http://127.0.0.1:3000/api/v1/cars/${id}`)
       .then((response) => setCar(response.data.car));
   }, []);
+
+  const handleReserve = () => {
+    localStorage.setItem('reservedCar', JSON.stringify(car));
+  };
 
   return (
     <>
@@ -34,9 +38,21 @@ const CarDetails = () => {
               {car.price}
             </p>
           </div>
-          <button type="button" className={styles.reservebtn}>
-            Reserve
-          </button>
+          <NavLink
+            to={{
+              pathname: '/new-reservation',
+              state: { carId: car.id },
+            }}
+            replace
+          >
+            <button
+              type="button"
+              className={styles.reservebtn}
+              onClick={handleReserve}
+            >
+              Reserve
+            </button>
+          </NavLink>
         </div>
       </div>
     </>

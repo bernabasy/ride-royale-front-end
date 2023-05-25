@@ -14,7 +14,6 @@ const NewCar = () => {
   const [loading, setLoading] = useState(false);
   const [responseMsg, setResponseMsg] = useState('');
   const user = useSelector((state) => state.user);
-  console.log(user.id);
   const handleSubmit = (event) => {
     event.preventDefault();
     setLoading(true);
