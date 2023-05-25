@@ -6,12 +6,13 @@ import ReservationCardItem from '../../components/ReservationCardItem';
 const MyReservations = () => {
   const [reservations, setReservations] = useState([]);
   const [loading, setLoading] = useState(false);
+  const user = JSON.parse(localStorage.getItem('user'));
 
   useEffect(() => {
     setLoading(true);
     axios
       .get(
-        'http://127.0.0.1:3000/api/v1/users/1/reservations',
+        `http://127.0.0.1:3000/api/v1/users/${user.user.id}/reservations`,
       )
       .then((response) => {
         setReservations(response.data.reservations);
@@ -27,8 +28,6 @@ const MyReservations = () => {
       );
     }
   }
-
-  // console.log(reservations);
 
   return (
     <Layout>

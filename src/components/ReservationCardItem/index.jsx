@@ -29,7 +29,7 @@ const ReservationCardItem = (data) => (
             </p>
             <p className="fs-6 m-0">
               Charge:
-              {data.data.reservation.price}
+              {data.data.car.price}
             </p>
           </div>
         </div>
