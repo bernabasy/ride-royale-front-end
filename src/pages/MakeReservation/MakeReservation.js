@@ -1,17 +1,31 @@
-import React, { useState } from 'react';
+/* eslint-disable prefer-destructuring */
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import style from './style.module.css';
 import Layout from '../../components/Layout/Layout';
 
 const MakeReservation = () => {
+  const user = useSelector((state) => state.user);
+  const username = user.user.username;
+  const reservedCar = JSON.parse(localStorage.getItem('reservedCar'));
+
   const [reservationData, setReservationData] = useState({
+    driverName: username || '',
+    carName: reservedCar ? reservedCar.make : '',
     city: '',
     date: '',
   });
-  const user = useSelector((state) => state.user);
-  const { city, date } = reservationData;
+
+  const {
+    driverName,
+    carName,
+    city,
+    date,
+  } = reservationData;
+
   const [reserved, setReserved] = useState(false);
+  const [cars, setCars] = useState([]);
   // const [errorMessage, setErrorMessage] = useState(null);
 
   const handleChange = (e) => {
@@ -22,11 +36,20 @@ const MakeReservation = () => {
     }));
   };
 
+  useEffect(() => {
+    axios.get('http://127.0.0.1:3000/api/v1/cars')
+      .then((response) => {
+        const data = response.data.cars;
+        setCars(data);
+      })
+      .catch((error) => error);
+  }, []);
+
   const handleReservation = (e) => {
     e.preventDefault();
-    const reservedCar = JSON.parse(localStorage.getItem('reservedCar'));
+    //  If there is a reserved car item in local storage, it means the user navigated here
+    // from the car_details page. Hence, [the if block] should be executed.
     if (reservedCar) {
-      // Make a post request to the make reservation URL with appropriate data
       axios
         .post(`http://localhost:3000/api/v1/users/${user.user.id}/reservations/`, {
           city,
@@ -36,17 +59,18 @@ const MakeReservation = () => {
         .then(() => {
           setReserved(true);
         })
-        .catch((error) => {
-          // setErrorMessage(error.response.data.error);
-          console.log(error.message);
-        });
+        .catch((error) => error.message);
 
       // Clear form fields
       setReservationData({
+        driverName: '',
         city: '',
         date: '',
+        carName: '',
       });
 
+      // Destroy the reserved car item in local storage to make room for making a reservation
+      //  from the side navigation
       localStorage.removeItem('reservedCar');
     } else {
       console.log('No data');
@@ -78,6 +102,47 @@ const MakeReservation = () => {
                 <div className="row gy-2">
                   <div className="col-md-4 ">
                     <label htmlFor="city" className={`form-label ${style.label}`}>
+                      Name:
+                      <input
+                        type="text"
+                        name="driverName"
+                        className={`form-control mt-2 rounded-pill ${style['input-field']}`}
+                        placeholder="Driver name"
+                        id="driverName"
+                        onChange={handleChange}
+                        value={driverName}
+                        required
+                      />
+                    </label>
+                  </div>
+                  <div className="col-md-4 ">
+                    <label htmlFor="city" className={`form-label ${style.label}`}>
+                      Car:
+                      <select
+                        className={`form-select form-control mt-2 rounded-pill ${style['input-field']}`}
+                        aria-label="Default select example"
+                        name="carName"
+                        id="carname"
+                        onChange={handleChange}
+                        value={carName}
+                        required
+                      >
+                        <option>{carName || 'Choose your luxury ride'}</option>
+                        {
+                    cars.map((car) => (
+                      <option
+                        key={car.make}
+                        value={car.id}
+                      >
+                        {car.make}
+                      </option>
+                    ))
+                        }
+                      </select>
+                    </label>
+                  </div>
+                  <div className="col-md-4 ">
+                    <label htmlFor="city" className={`form-label ${style.label}`}>
                       City:
                       <input
                         type="text"
@@ -87,6 +152,7 @@ const MakeReservation = () => {
                         id="city"
                         onChange={handleChange}
                         value={city}
+                        required
                       />
                     </label>
                   </div>
@@ -101,6 +167,7 @@ const MakeReservation = () => {
                         id="date"
                         value={date}
                         onChange={handleChange}
+                        required
                       />
                     </label>
                   </div>
