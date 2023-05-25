@@ -1,14 +1,13 @@
-/* eslint-disable prefer-destructuring */
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
 import axios from 'axios';
 import style from './style.module.css';
 import Layout from '../../components/Layout/Layout';
 
 const MakeReservation = () => {
-  const user = useSelector((state) => state.user);
-  const username = user.user.username;
   const reservedCar = JSON.parse(localStorage.getItem('reservedCar'));
+  const authUser = JSON.parse(localStorage.getItem('user'));
+  const { id: userId, username } = authUser.user;
+  const [responseMsg, setResponseMsg] = useState('');
 
   const [reservationData, setReservationData] = useState({
     driverName: username || '',
@@ -24,7 +23,6 @@ const MakeReservation = () => {
     date,
   } = reservationData;
 
-  const [reserved, setReserved] = useState(false);
   const [cars, setCars] = useState([]);
   // const [errorMessage, setErrorMessage] = useState(null);
 
@@ -51,13 +49,10 @@ const MakeReservation = () => {
     // from the car_details page. Hence, [the if block] should be executed.
     if (reservedCar) {
       axios
-        .post(`http://localhost:3000/api/v1/users/${user.user.id}/reservations/`, {
+        .post(`http://localhost:3000/api/v1/users/${userId}/reservations/`, {
           city,
           date,
           car_id: reservedCar.id,
-        })
-        .then(() => {
-          setReserved(true);
         })
         .catch((error) => error.message);
 
@@ -73,7 +68,23 @@ const MakeReservation = () => {
       //  from the side navigation
       localStorage.removeItem('reservedCar');
     } else {
-      console.log('No data');
+      axios.post(`http://localhost:3000/api/v1/users/${userId}/reservations/`, {
+        city,
+        date,
+      })
+        .then((response) => {
+          setResponseMsg(response.statusText);
+        })
+        .catch((error) => {
+          setResponseMsg(error.statusText);
+        });
+      // Clear form fields
+      setReservationData({
+        driverName: '',
+        city: '',
+        date: '',
+        carName: '',
+      });
     }
   };
 
@@ -184,6 +195,9 @@ const MakeReservation = () => {
                 </div>
               </form>
             </div>
+            <p className="fs-5 fw-semibold text-black">
+              {responseMsg}
+            </p>
           </div>
         </div>
       </div>
