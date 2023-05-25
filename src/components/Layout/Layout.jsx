@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
         >
           <MdOutlineClose style={{ fontSize: '1.5rem' }} />
         </button>
-        <h4 className="fw-bold text-center my-4">Ride Royal</h4>
+        <h4 className="fw-bold text-center my-4">Ride Royale</h4>
         <SideNav />
       </aside>
       <div className={`col-md-10 ${style['main-wrapper']}`}>

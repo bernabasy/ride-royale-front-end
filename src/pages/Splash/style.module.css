@@ -1,0 +1,12 @@
+.bg-wrapper {
+  background-image: url('../../assets/images/make-reservation-bg-img.jpg');
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.image-overlay {
+  height: 100vh;
+  background-color: rgba(150, 191, 1, 0.75);
+}

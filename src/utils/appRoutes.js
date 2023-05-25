@@ -1,17 +1,32 @@
+import SplashScreen from '../pages/Splash';
 import Home from '../pages/Home';
 import MakeReservation from '../pages/MakeReservation/MakeReservation';
 import MyReservations from '../pages/MyReservations';
 import AddCar from '../pages/AddCar';
 import Deletecar from '../pages/DeleteCar';
 import CarDetails from '../pages/CarDetails';
+import SignupPage from '../pages/Signup';
+import LoginPage from '../pages/Login';
 
-const SIDE_NAV_ROUTES = [
+const APP_ROUTES = [
+  {
+    path: '/',
+    element: <SplashScreen />,
+  },
+  {
+    path: '/signup',
+    element: <SignupPage />,
+  },
+  {
+    path: '/signin',
+    element: <LoginPage />,
+  },
   {
     path: '/cars',
     element: <Home />,
   },
   {
-    path: '/car-details/:id',
+    path: '/car/:id',
     element: <CarDetails />,
   },
   {
@@ -37,4 +52,4 @@ const SIDE_NAV_ROUTES = [
   },
 ];
 
-export default SIDE_NAV_ROUTES;
+export default APP_ROUTES;

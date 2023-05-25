@@ -1,18 +1,11 @@
-.carCnt {
+.picContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  min-height: 400px;
-}
-
-.imgCnt {
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.carImg {
+.carPicture {
   min-height: 350px;
   max-height: 351px;
   object-fit: cover;
@@ -21,7 +14,11 @@
   border-radius: 20px;
 }
 
-.errorMsg {
-  color: red;
+.price {
+  background-color: rgb(24, 216, 91);
+  border-radius: 20px;
+  padding: 0.4rem 0.75rem;
+  margin-top: 1rem;
+  color: rgb(249, 249, 249);
   font-weight: 500;
 }

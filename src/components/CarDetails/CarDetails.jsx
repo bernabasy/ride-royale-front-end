@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import styles from './CarDetails.module.css';
+
 const CarDetails = () => {
   const { id } = useParams();
   const [car, setCar] = useState({});
@@ -32,10 +33,9 @@ const CarDetails = () => {
               {car.price}
             </p>
           </div>
-          <button type="button" className={styles.reservebtn} >
-              
-                Reserve
-            </button>
+          <button type="button" className={styles.reservebtn}>
+            Reserve
+          </button>
         </div>
       </div>
     </>
