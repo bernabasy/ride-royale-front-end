@@ -26,7 +26,7 @@ const APP_ROUTES = [
     element: <Home />,
   },
   {
-    path: '/car-details/:id',
+    path: '/car/:id',
     element: <CarDetails />,
   },
   {
