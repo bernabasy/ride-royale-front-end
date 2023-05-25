@@ -1,22 +1,13 @@
 import React from 'react';
 import Layout from '../../components/Layout/Layout';
-import ReservationCardItem from '../../components/ReservationCardItem';
 
-const MyReservations = () => (
+const MyReservationsPage = () => (
+
   <Layout>
-    <div className="min-vh-100 container page-wrapper">
-      <h4 className="text-center my-4">My Reservations</h4>
 
-      <div className="row">
-        <ReservationCardItem />
-        <ReservationCardItem />
-        <ReservationCardItem />
-        <ReservationCardItem />
-        <ReservationCardItem />
-        <ReservationCardItem />
-      </div>
-    </div>
+    <h1>My Reservations</h1>
+
   </Layout>
 );
 
-export default MyReservations;
+export default MyReservationsPage;

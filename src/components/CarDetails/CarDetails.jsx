@@ -3,7 +3,6 @@ import { NavLink, useParams } from 'react-router-dom';
 import axios from 'axios';
 import styles from './CarDetails.module.css';
 
-
 const CarDetails = () => {
   const { id } = useParams();
   const [car, setCar] = useState({});
