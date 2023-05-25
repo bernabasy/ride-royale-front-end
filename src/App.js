@@ -1,14 +1,26 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import SIDE_NAV_ROUTES from './utils/sideNavRoutes';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import APP_ROUTES from './utils/appRoutes';
 import './App.css';
+// import LoginPage from './pages/Login';
+import { authenticateUser } from './redux/auth/authSlice';
+import MyReservations from './pages/MyReservations';
 
 function App() {
-  const sideNavRoutes = createBrowserRouter(SIDE_NAV_ROUTES);
+  const dispatch = useDispatch();
+  const router = createBrowserRouter(APP_ROUTES);
+  const user = useSelector((state) => state.user);
+  useEffect(() => {
+    dispatch(authenticateUser());
+  }, [dispatch]);
 
   return (
-    <main>
-      <RouterProvider router={sideNavRoutes} />
-    </main>
+    <RouterProvider router={router}>
+      <App>
+        {user.logged_in && <MyReservations />}
+      </App>
+    </RouterProvider>
   );
 }
 

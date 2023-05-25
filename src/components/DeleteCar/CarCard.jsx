@@ -2,7 +2,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+
 import styles from './style.css';
+
 const api_url = 'http://127.0.0.1:3000/api/v1/cars/';
 
 const DeleteCarUi = ({
