@@ -1,9 +1,15 @@
-import renderer from 'react-test-renderer';
+import { BrowserRouter } from 'react-router-dom';
+import { render } from '@testing-library/react';
 import CarDetails from '../components/CarDetails/CarDetails';
 
-it('Render the CarDetails component', () => {
-  const tree = renderer.create(
-    <CarDetails />,
-  ).toJSON();
-  expect(tree).toMatchSnapshot();
+
+describe('Render the CarDetails component', () => {
+  it('renders correctly', () => {
+    const tree = render(
+      <BrowserRouter>
+        <CarDetails />,
+      </BrowserRouter>,
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });

@@ -1,12 +1,12 @@
-import { render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import Deletecar from '../pages/DeleteCar';
+import { render } from '@testing-library/react';
+import DeleteCar from '../components/DeleteCar/DeleteCar';
 
 describe('Deletecar tests', () => {
   it('renders correctly', () => {
     const tree = render(
       <BrowserRouter>
-        <Deletecar />
+        <DeleteCar />
       </BrowserRouter>,
     );
     expect(tree).toMatchSnapshot();

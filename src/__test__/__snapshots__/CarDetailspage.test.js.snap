@@ -1,27 +1,115 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Deletecar tests renders correctly 1`] = `
+exports[`Render the CarDetails component renders correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="container-fluid d-flex justify-content-center align-items-center vh-100"
+      <h2
+        class="title"
       >
-        <i
-          class="fa-solid fa-spinner fa-spin fs-1"
-        />
+        CAR DETAILS
+      </h2>
+      <div
+        class="detailContainer"
+      >
+        <div
+          class="car"
+        >
+          <img />
+        </div>
+        <div
+          class="detail"
+        >
+          <h2 />
+          <div
+            class="company"
+          >
+            <p>
+              Make:
+            </p>
+            <p />
+          </div>
+          <div
+            class="price"
+          >
+            <p>
+              Price Per Day: 
+            </p>
+            <p
+              class="priceColor"
+            >
+              $
+            </p>
+          </div>
+          <a
+            class=""
+            href="/new-reservation"
+          >
+            <button
+              class="reservebtn float-right"
+              type="button"
+            >
+              Reserve
+            </button>
+          </a>
+        </div>
       </div>
+      ,
     </div>
   </body>,
   "container": <div>
-    <div
-      class="container-fluid d-flex justify-content-center align-items-center vh-100"
+    <h2
+      class="title"
     >
-      <i
-        class="fa-solid fa-spinner fa-spin fs-1"
-      />
+      CAR DETAILS
+    </h2>
+    <div
+      class="detailContainer"
+    >
+      <div
+        class="car"
+      >
+        <img />
+      </div>
+      <div
+        class="detail"
+      >
+        <h2 />
+        <div
+          class="company"
+        >
+          <p>
+            Make:
+          </p>
+          <p />
+        </div>
+        <div
+          class="price"
+        >
+          <p>
+            Price Per Day: 
+          </p>
+          <p
+            class="priceColor"
+          >
+            $
+          </p>
+        </div>
+        <a
+          class=""
+          href="/new-reservation"
+        >
+          <button
+            class="reservebtn float-right"
+            type="button"
+          >
+            Reserve
+          </button>
+        </a>
+      </div>
     </div>
+    ,
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
