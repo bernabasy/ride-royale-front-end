@@ -1,0 +1,9 @@
+.form-wrapper {
+  width: 50%;
+}
+
+@media screen and (max-width: 920px) {
+  .form-wrapper {
+    width: 100%;
+  }
+}

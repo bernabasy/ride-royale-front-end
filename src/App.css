@@ -1,0 +1,29 @@
+.form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(150, 191, 1, 0.25);
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.page-wrapper {
+  transform: scale(0.95);
+}
+
+@media screen and (max-width: 920px) {
+  .page-wrapper {
+    transform: scale(1);
+  }
+}
+
+.custom-button {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,24 @@
+.picContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carPicture {
+  min-height: 350px;
+  max-height: 351px;
+  object-fit: cover;
+  min-width: 250px;
+  max-width: 250px;
+  border-radius: 20px;
+}
+
+.price {
+  background-color: #96bf01;
+  border-radius: 20px;
+  padding: 0.4rem 1.5em;
+  margin-top: 1rem;
+  color: rgb(249, 249, 249);
+  font-weight: 500;
+}
