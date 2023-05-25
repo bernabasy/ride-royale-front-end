@@ -13,6 +13,10 @@ const CarDetails = () => {
       .then((response) => setCar(response.data.car));
   }, []);
 
+  const handleReserve = () => {
+    localStorage.setItem('reservedCar', JSON.stringify(car));
+  };
+
   return (
     <>
       <h2 className={styles.title}>CAR DETAILS</h2>
@@ -33,10 +37,17 @@ const CarDetails = () => {
               {car.price}
             </p>
           </div>
-          <NavLink to="/new-reservation" replace state={{ carId: id }}>
+          <NavLink
+            to={{
+              pathname: '/new-reservation',
+              state: { carId: car.id },
+            }}
+            replace
+          >
             <button
               type="button"
               className={styles.reservebtn}
+              onClick={handleReserve}
             >
               Reserve
             </button>
