@@ -1,7 +1,8 @@
+/* eslint-disable import/extensions */
 import { render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import CarCard from '../components/CarsList/CarCard';
-import CarsList from '../components/CarsList/CarsList';
+import CarCard from '../components/CarsList/CarCard.js';
+import CarsList from '../components/CarsList/CarsList.js';
 
 describe('CarCard tests', () => {
   it('renders correctly', () => {

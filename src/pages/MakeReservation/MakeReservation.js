@@ -143,9 +143,9 @@ const MakeReservation = () => {
                     cars.map((car) => (
                       <option
                         key={car.make}
-                        value={car.id}
+                        value={`${car.make} ${car.model}`}
                       >
-                        {car.make}
+                        {`${car.make} ${car.model}`}
                       </option>
                     ))
                         }

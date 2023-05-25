@@ -14,12 +14,14 @@ const NewCar = () => {
   const [loading, setLoading] = useState(false);
   const [responseMsg, setResponseMsg] = useState('');
   const user = useSelector((state) => state.user);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setLoading(true);
     const data = {
       user_id: user.user.id, model, make, picture, price,
     };
+
     axios.post('http://127.0.0.1:3000/api/v1/cars', data)
       .then((response) => {
         setLoading(false);
@@ -66,10 +68,9 @@ const NewCar = () => {
     <Container className="bg-wrapper_newCar container-fluid">
       <div className="d-flex flex-column justify-content-center align-items-center image-overlay">
         <Row className="w-100">
-          <Col md={12}>
-            <h2 className="text-center text-back text-uppercase h2">Add Car</h2>
-            <hr className="border-2 w-full mb-3" />
+          <Col md={12} classname="d-flex justify-content-center">
             <Form onSubmit={handleSubmit} className="w-50 mx-auto">
+              <h2 className="text-start text-uppercase mb-4 fw-bold color-green h2">Add Car</h2>
               <div className="mb-3">
                 <label htmlFor="model">
                   Model:
@@ -127,7 +128,7 @@ const NewCar = () => {
                 </Button>
               )}
             </Form>
-            <p className="fs-5 fw-semibold">{responseMsg}</p>
+            <p className="fs-5 text-center color-success fw-semibold">{responseMsg}</p>
           </Col>
         </Row>
       </div>
