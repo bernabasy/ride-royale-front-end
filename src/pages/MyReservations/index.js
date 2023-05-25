@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Layout from '../../components/Layout/Layout';
-import ReservationCardItem from '../../components/ReservationCardItem';
+
+const MyReservationsPage = () => (
 
 const MyReservations = () => {
   const [reservations, setReservations] = useState([]);
@@ -49,4 +50,4 @@ const MyReservations = () => {
   );
 };
 
-export default MyReservations;
+export default MyReservationsPage;
