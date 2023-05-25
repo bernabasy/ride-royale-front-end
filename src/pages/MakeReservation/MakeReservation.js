@@ -1,20 +1,56 @@
-import React, { useEffect } from 'react';
-import { useMatch } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import axios from 'axios';
 import style from './style.module.css';
 import Layout from '../../components/Layout/Layout';
 
 const MakeReservation = () => {
-  const { params } = useMatch('/new-reservation');
-  const { carId } = params;
+  const [reservationData, setReservationData] = useState({
+    city: '',
+    date: '',
+  });
+  const user = useSelector((state) => state.user);
+  const { city, date } = reservationData;
+  const [reserved, setReserved] = useState(false);
+  // const [errorMessage, setErrorMessage] = useState(null);
 
-  useEffect(() => {
-    console.log(carId);
-  }, []);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setReservationData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   const handleReservation = (e) => {
     e.preventDefault();
     const reservedCar = JSON.parse(localStorage.getItem('reservedCar'));
-    console.log(reservedCar);
+    if (reservedCar) {
+      // Make a post request to the make reservation URL with appropriate data
+      axios
+        .post(`http://localhost:3000/api/v1/users/${user.user.id}/reservations/`, {
+          city,
+          date,
+          car_id: reservedCar.id,
+        })
+        .then(() => {
+          setReserved(true);
+        })
+        .catch((error) => {
+          // setErrorMessage(error.response.data.error);
+          console.log(error.message);
+        });
+
+      // Clear form fields
+      setReservationData({
+        city: '',
+        date: '',
+      });
+
+      localStorage.removeItem('reservedCar');
+    } else {
+      console.log('No data');
+    }
   };
 
   return (
@@ -45,9 +81,12 @@ const MakeReservation = () => {
                       City:
                       <input
                         type="text"
+                        name="city"
                         className={`form-control mt-2 rounded-pill ${style['input-field']}`}
                         placeholder="City"
                         id="city"
+                        onChange={handleChange}
+                        value={city}
                       />
                     </label>
                   </div>
@@ -56,9 +95,12 @@ const MakeReservation = () => {
                       Reservation Date:
                       <input
                         type="date"
+                        name="date"
                         className={`form-control mt-2 rounded-pill ${style['input-field']}`}
                         placeholder="Reservation Date"
                         id="date"
+                        value={date}
+                        onChange={handleChange}
                       />
                     </label>
                   </div>
