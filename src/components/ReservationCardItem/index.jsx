@@ -15,9 +15,9 @@ const ReservationCardItem = (data) => (
         </div>
         <div className="col-md-8">
           <div className="card-body">
-            <h5 className="card-title">
+            <h5 className="card-title fw-bold color-success">
               Card Model:
-              {data.data.car.model}
+              <span className={style.title}>{data.data.car.model}</span>
             </h5>
             <p className="fs-6 m-0">
               Reservation date:

@@ -28,7 +28,7 @@ const CarDetails = () => {
         <div className={styles.detail}>
           <h2>{car.model}</h2>
           <div className={styles.company}>
-            <p>Company Name:</p>
+            <p>Make:</p>
             <p>{car.make}</p>
           </div>
           <div className={styles.price}>
@@ -47,7 +47,7 @@ const CarDetails = () => {
           >
             <button
               type="button"
-              className={styles.reservebtn}
+              className={`${styles.reservebtn} float-right`}
               onClick={handleReserve}
             >
               Reserve
