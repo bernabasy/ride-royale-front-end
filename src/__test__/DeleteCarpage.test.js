@@ -1,9 +1,9 @@
 import renderer from 'react-test-renderer';
-import CarDetails from '../components/CarDetails/CarDetails';
+import DeleteCar from '../components/DeleteCar/DeleteCar';
 
-it('Render the CarDetails component', () => {
+it('Render the DeleteCar component', () => {
   const tree = renderer.create(
-    <CarDetails />,
+    <DeleteCar />,
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });
