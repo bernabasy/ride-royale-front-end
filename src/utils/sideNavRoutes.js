@@ -3,7 +3,7 @@ import MakeReservation from '../pages/MakeReservation/MakeReservation';
 import MyReservations from '../pages/MyReservations';
 import AddCar from '../pages/AddCar';
 import Deletecar from '../pages/DeleteCar';
-import CarDetails from '../components/CarDetails/CarDetails';
+import CarDetails from '../pages/CarDetails';
 
 const SIDE_NAV_ROUTES = [
   {
@@ -23,7 +23,7 @@ const SIDE_NAV_ROUTES = [
     element: <MakeReservation />,
   },
   {
-    path: ':id/reservations',
+    path: '/reservations',
     element: <MyReservations />,
   },
   {

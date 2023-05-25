@@ -4,7 +4,9 @@ import MyReservations from '../../components/MyReservations/MyReservations';
 
 const MyReservationsPage = () => (
   <Layout>
-    <MyReservations />
+
+     <h1>My Reservations</h1>
+
   </Layout>
 );
 
