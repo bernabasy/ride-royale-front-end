@@ -7,7 +7,7 @@ import './App.css';
 import { authenticateUser } from './redux/auth/authSlice';
 import MyReservations from './pages/MyReservations';
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
   const router = createBrowserRouter(APP_ROUTES);
   const user = useSelector((state) => state.user);
@@ -22,6 +22,6 @@ function App() {
       </App>
     </RouterProvider>
   );
-}
+};
 
 export default App;

@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Render the DeleteCar component 1`] = `
-<h2
-  className="mt-5 text-center"
->
-  You don't have any cars in our system yet.
-</h2>
-`;
