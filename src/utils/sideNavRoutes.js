@@ -23,7 +23,7 @@ const SIDE_NAV_ROUTES = [
     element: <MakeReservation />,
   },
   {
-    path: '/reservations',
+    path: ':id/reservations',
     element: <MyReservations />,
   },
   {
