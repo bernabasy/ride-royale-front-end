@@ -114,6 +114,14 @@ $ npm run test
 - Twitter: [SaeqaSultani](https://twitter.com/SaeqaSultani)
 - LinkedIn: [SaeqaSultani](https://www.linkedin.com/in/saeqa-sultani)
 
+### 🔭Future Features
+
+[ ] Authentication and authorization: This will allow users to create accounts and log in to the blog. It will also allow users to create and manage their own profiles.
+[ ] Dark mode: This will allow users to switch to a dark theme for the blog.
+[ ] Ratings: This will allow users to rate tutors and leave reviews.
+[ ] Search bar: This will allow users to search for specific topics or keywords within the blog.
+[ ] Sharing buttons: This will allow users to share the link on social media platforms or other websites.
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -127,7 +135,6 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 - [Microverse](https://www.microverse.org/)
 - Original design idea by [Murat Korkmaz on Behance](https://www.behance.net/muratk).
-- [FontAwesome](https://fontawesome.com/) and [Flaticon](https://www.flaticon.com/) for icons.
 
 ## 📝 License
 This project is [MIT](./LICENSE) licensed.
