@@ -4,11 +4,12 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
   /* background-color: rgba(150, 191, 1, 0.75); */
 }
 
 .color-green {
-  color:  rgba(150, 191, 1, 0.75);
+  color: rgba(150, 191, 1, 0.75);
 }
 
 .width {
@@ -17,12 +18,14 @@
 
 .image-overlay {
   height: 100vh;
+
   /* background-color: rgba(150, 191, 1, 0.75); */
 }
 
 @media screen and (max-width: 920px) {
   .image-overlay {
     height: 75vh;
+
     /* background-color: rgba(150, 191, 1, 0.75); */
   }
 
