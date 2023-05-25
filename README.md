@@ -16,11 +16,6 @@ Main features of this website are:
  - Users can add their own cars and remove them if they want to.
  
  
- ![Animation]()
-
-
-## Project Documentation 📄
-
 - API GitHub repository [link](https://github.com/bernabasy/ride-royale-front-end)👈
 
 ## Kanban Board:
@@ -29,6 +24,10 @@ Main features of this website are:
 
 ### Initial state of the Kanban Board:
 ![image](https://github.com/bernabasy/Ride-Royale-front-end/assets/104406349/10e892d5-d1f4-4e45-837a-b3c0d622d9c2)
+
+### Final state of the Kanban Board:
+![image](https://github.com/bernabasy/ride-royale-front-end/assets/104406349/b035f302-9936-4a7d-bf1d-ec54816d6580)
+
 
 ### Team members: 3 (Bernabas yosef, Michael Amponsah, Saeqa Sultani)
  
