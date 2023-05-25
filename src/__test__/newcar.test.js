@@ -1,7 +1,7 @@
 /* eslint-disable import/extensions */
 import { render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import CarCard from '../components/CarsList/CarCard.js';
+import CarCard from '../components/CarsList/CarCard.jsx';
 import CarsList from '../components/CarsList/CarsList.js';
 
 describe('CarCard tests', () => {
