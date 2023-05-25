@@ -16,7 +16,7 @@ Main features of this website are:
  - Users can add their own cars and remove them if they want to.
  
  
-- API GitHub repository [link](https://github.com/bernabasy/ride-royale-front-end)👈
+- API GitHub repository [link](https://github.com/michaelamponsah/ride-royale-api)👈
 
 ## Kanban Board:
 
