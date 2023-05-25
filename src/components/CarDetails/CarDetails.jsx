@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import styles from './style.css';
+import styles from './CarDetails.module.css';
+
 
 const CarDetails = () => {
   const { id } = useParams();

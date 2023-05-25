@@ -6,8 +6,7 @@ import AddCar from '../pages/AddCar';
 import Deletecar from '../pages/DeleteCar';
 import SignupPage from '../pages/Signup';
 import LoginPage from '../pages/Login';
-import CarDetails from '../components/CarDetails/CarDetails';
-
+import CarDetails from '../pages/CarDetails';
 const APP_ROUTES = [
   {
     path: '/',
@@ -26,7 +25,7 @@ const APP_ROUTES = [
     element: <Home />,
   },
   {
-    path: '/car-details/:id',
+    path: '/car/:id',
     element: <CarDetails />,
   },
   {
