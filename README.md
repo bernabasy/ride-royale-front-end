@@ -116,10 +116,10 @@ $ npm run test
 
 ### 🔭Future Features
 
-- [ ] Authentication and authorization: This will allow users to create accounts and log in to the blog. It will also allow users to create and manage their own profiles.
-- [ ] Dark mode: This will allow users to switch to a dark theme for the blog.
-- [ ] Ratings: This will allow users to rate tutors and leave reviews.
-- [ ] Search bar: This will allow users to search for specific topics or keywords within the blog.
+- [ ] Authentication and authorization: This will allow users to create accounts and log in to the app. It will also allow users to create and manage their own cars and reservations .
+- [ ] Dark mode: This will allow users to switch to a dark theme for the app.
+- [ ] Ratings: This will allow users to rate cars and leave reviews.
+- [ ] Search bar: This will allow users to search for specific topics or keywords within the app.
 - [ ] Sharing buttons: This will allow users to share the link on social media platforms or other websites.
 
 ## 🤝 Contributing
