@@ -71,6 +71,7 @@ const MakeReservation = () => {
       axios.post(`http://localhost:3000/api/v1/users/${userId}/reservations/`, {
         city,
         date,
+        car_id: 1,
       })
         .then((response) => {
           setResponseMsg(response.statusText);
@@ -138,7 +139,7 @@ const MakeReservation = () => {
                         value={carName}
                         required
                       >
-                        <option>{carName || 'Choose your luxury ride'}</option>
+                        <option value={carName || ''}>{carName || 'Choose your luxury ride'}</option>
                         {
                     cars.map((car) => (
                       <option

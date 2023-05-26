@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import style from './style.module.css';
 import { login } from '../../redux/auth/authSlice';
@@ -24,10 +24,16 @@ const LoginPage = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    dispatch(login({ ...formData, setLoading }));
+    setLoading(true);
+    dispatch(login({ ...formData }));
+    setLoading(false);
   };
 
   const { username } = formData;
+
+  if (user.logged_in) {
+    return <Navigate replace to="/cars" />;
+  }
 
   return (
     <div className="d-flex justify-content-center align-items-center min-vh-100 container">

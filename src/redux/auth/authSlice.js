@@ -16,10 +16,7 @@ export const register = createAsyncThunk(
       .post(
         `http://localhost:3000/register/${username}/${email}`,
       )
-      .then((response) => {
-        localStorage.setItem('user', JSON.stringify(response.data));
-        window.location.reload();
-      })
+      .then((response) => response.data)
       .catch((error) => {
         setLoading(false);
         return {
@@ -34,21 +31,19 @@ export const register = createAsyncThunk(
 
 export const login = createAsyncThunk(
   'user/login',
-  ({ username, setLoading }) => {
-    const result = axios
+  async ({ username }) => {
+    const result = await axios
       .get(`http://localhost:3000/login/${username}`)
       .then((response) => {
         localStorage.setItem('user', JSON.stringify(response.data));
-        window.location.reload();
+        return response.data;
+        // window.location.reload();
       })
-      .catch((error) => {
-        setLoading(false);
-        return {
-          user: null,
-          logged_in: false,
-          error: error.response.data.error,
-        };
-      });
+      .catch((error) => ({
+        user: null,
+        logged_in: false,
+        error: error.response.data.error,
+      }));
     return result;
   },
 );
@@ -73,7 +68,7 @@ export const authSlice = createSlice({
     [register.fulfilled]: (state, action) => ({
       ...state,
       user: action.payload.user,
-      logged_in: action.payload.logged_in,
+      // logged_in: action.payload.logged_in,
       error: action.payload.error,
     }),
     [register.rejected]: (state, action) => ({
