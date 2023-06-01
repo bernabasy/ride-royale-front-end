@@ -96,7 +96,7 @@ $ npm run test
 ```
 ## Authors
 
-👤 **Bernabas**
+👤 **Bernabas Yosef**
 
 - GitHub: [@githubhandle](https://github.com/bernabasy)
 - Twitter: [@twitterhandle](https://twitter.com/@bernabasjosef)
