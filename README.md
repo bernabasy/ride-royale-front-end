@@ -29,13 +29,13 @@ Main features of this website are:
 ![image](https://github.com/bernabasy/ride-royale-front-end/assets/104406349/b035f302-9936-4a7d-bf1d-ec54816d6580)
 
 
-### Team members: 3 (Bernabas yosef, Michael Amponsah, Saeqa Sultani)
+### Team members: 3 (Bernabas Yosef, Michael Amponsah, Saeqa Sultani)
  
 ## Built With 🛠️
 
  - Programming Languages: HTML, CSS, JavaScript.
- - Frameworks: React, Redux and Bootstrap.
- - Code Editor: VS Code.
+ - Frameworks: React, Redux, and Bootstrap.
+ - Code Editor: VS Code, or Any.
  
 ## Getting Started
  
@@ -44,7 +44,7 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 - A web browser like Google Chrome.
-- A code editor like Visual Studio Code with Git and nodejs.
+- A code editor like Visual Studio Code with Git and Nodejs.
 
 > You can check if Git is installed by running the following command in the terminal.
 ```
@@ -116,7 +116,7 @@ $ npm run test
 
 ### 🔭Future Features
 
-- [ ] Authentication and authorization: This will allow users to create accounts and log in to the app. It will also allow users to create and manage their own cars and reservations .
+- [ ] Authentication and authorization: This will allow users to create accounts and log in to the app. It will also allow users to create and manage their own cars and reservations.
 - [ ] Dark mode: This will allow users to switch to a dark theme for the app.
 - [ ] Ratings: This will allow users to rate cars and leave reviews.
 - [ ] Search bar: This will allow users to search for specific topics or keywords within the app.
