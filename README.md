@@ -15,7 +15,6 @@ Main features of this website are:
  - Users can reserve a car for a special day (a car that hasn't been reserved yet).
  - Users can add their own cars and remove them if they want to.
  
- 
 - API GitHub repository [link](https://github.com/michaelamponsah/ride-royale-api)👈
 
 ## Kanban Board:
@@ -54,7 +53,6 @@ $ git --version
 ```
 $ node --version
 ```
-
 ### Setup
 
 Clone the repository using the GitHub link provided below.
