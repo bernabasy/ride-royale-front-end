@@ -2,7 +2,6 @@
 
 
 This project is designed for the reservation of fancy cars. If you are preparing for a special day or event and you want a cool car for it, this website is the best place for you. If you have a luxurious car and want to make some extra money from it, you can add it to our website and others will be able to reserve it!
-
 Here are some of the benefits of using our website:
 
 - Wide selection of cars to choose from
